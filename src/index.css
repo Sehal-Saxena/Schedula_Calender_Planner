@@ -1,0 +1,220 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 230 25% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 259 30% 15%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 259 30% 15%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 16 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 250 50% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 230 25% 20%;
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 250 50% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 259 25% 20%;
+    --input: 259 25% 20%;
+    --ring: 16 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 259 30% 15%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 16 100% 50%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 250 50% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 259 25% 20%;
+    --sidebar-ring: 16 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, .title-font {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer components {
+  .calendar-day {
+    @apply aspect-square flex flex-col p-1 border border-border rounded-md transition-all hover:bg-accent/50 cursor-pointer text-white;
+  }
+  
+  .calendar-day-header {
+    @apply text-xs font-medium text-white mb-1;
+  }
+  
+  .calendar-day-content {
+    @apply flex-1 flex flex-col gap-1 overflow-hidden text-white;
+  }
+  
+  .calendar-event {
+    @apply text-xs p-1 rounded-md truncate animate-fade-in text-white;
+  }
+  
+  .status-confirmed {
+    @apply bg-calendar-success text-white;
+  }
+  
+  .status-pending {
+    @apply bg-calendar-pending text-black;
+  }
+  
+  .status-cancelled {
+    @apply bg-calendar-cancelled text-white;
+  }
+  
+  .slot-available {
+    @apply bg-calendar-available/20 text-calendar-available border border-calendar-available/30;
+  }
+  
+  .slot-booked {
+    @apply bg-calendar-booked/20 text-calendar-booked border border-calendar-booked/30;
+  }
+  
+  .view-toggle-button {
+    @apply px-3 py-1.5 rounded-md text-sm font-medium;
+  }
+  
+  .view-toggle-button-active {
+    @apply bg-primary text-white;
+  }
+  
+  .view-toggle-button-inactive {
+    @apply bg-muted text-white hover:bg-muted/80;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold text-primary;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-white mt-2 mb-8;
+  }
+  
+  .space-gradient {
+    @apply bg-gradient-to-r from-[#FF5722] to-[#BD93F9];
+  }
+  
+  .consultation-card {
+    @apply border border-border bg-card/70 backdrop-blur-sm rounded-lg p-6 hover:shadow-md hover:shadow-primary/10 transition-all;
+  }
+  
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .space-border {
+    @apply border border-white/10;
+  }
+
+  .text-glow {
+    @apply animate-glow;
+  }
+  
+  .purple-space-card {
+    @apply bg-gradient-to-br from-purple-900/80 via-indigo-900/60 to-purple-800/40 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .cosmic-gradient {
+    @apply bg-gradient-to-r from-purple-800/70 via-indigo-700/60 to-purple-700/50;
+  }
+}
+
+.fc .fc-toolbar-title {
+  @apply text-xl font-semibold text-white;
+}
+
+.fc .fc-button {
+  @apply bg-primary border-primary hover:bg-primary/90 hover:border-primary/90 focus:shadow-none;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  @apply bg-secondary border-secondary;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  @apply bg-primary/10;
+}
+
+.fc .fc-timegrid-slot {
+  @apply h-12;
+}
+
+.fc .fc-event {
+  @apply cursor-pointer border-none;
+}
+
+.fc-event-main {
+  @apply p-1;
+}
+
+/* Dark theme adjustments for FullCalendar */
+.fc {
+  @apply text-white;
+}
+
+.fc .fc-view-harness {
+  @apply cosmic-gradient rounded-lg backdrop-blur-sm;
+}
+
+.fc th {
+  @apply bg-muted/50 text-white border-border;
+}
+
+.fc td {
+  @apply border-border text-white;
+}
+
+.fc .fc-scrollgrid {
+  @apply border-border rounded-lg overflow-hidden;
+}
+
+.fc .fc-highlight {
+  @apply bg-primary/20;
+}
+
+.fc .fc-daygrid-day-number {
+  @apply text-white;
+}
+
+.fc .fc-col-header-cell-cushion {
+  @apply text-white;
+}
+
+.fc .fc-list-day-cushion {
+  @apply text-white;
+}
