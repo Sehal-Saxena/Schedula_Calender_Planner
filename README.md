@@ -1,8 +1,41 @@
-# Schedula Calendar
 
-## Project info
+# Schedula: Cosmic Appointment Management
 
-A modern appointment scheduling system.
+## Project Overview
+
+Schedula is an advanced appointment scheduling application designed to streamline your booking and time management experience. With a sleek, space-themed interface, this app offers a modern and intuitive way to manage your appointments across various domains.
+
+## Key Features
+
+### 🚀 Dynamic Appointment Management
+- Create, edit, and track appointments with ease
+- View appointments by status: Total, Upcoming, Completed
+- Flexible scheduling with available time slots
+
+### 🌟 User-Friendly Dashboard
+- Intuitive dashboard with comprehensive appointment statistics
+- Quick access to calendar and scheduling
+- Responsive design for desktop and mobile devices
+
+### 🔐 Secure Authentication
+- Role-based access control
+- Admin and user perspectives
+- Secure login and signup functionality
+
+### 🌐 Responsive Design
+- Built with modern web technologies
+- Tailwind CSS for elegant, responsive styling
+- Mobile-friendly interface
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn UI
+- React Router
+- React Query
 
 ## How can I edit this code?
 
@@ -30,42 +63,4 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project using any hosting service that supports static site hosting, such as:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS Amplify
-- Firebase Hosting
-
-## Can I connect a custom domain to my project?
-
-Yes, you can!
-
-Most hosting providers allow you to connect a custom domain to your project. Check your provider's documentation for specific instructions.
